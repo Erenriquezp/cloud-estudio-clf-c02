@@ -1,0 +1,40 @@
+# Lista blanca: todo lo de la raiz queda fuera salvo lo permitido aqui
+/*
+!/.gitignore
+!/.gitmodules
+!/README.md
+!/syllabus.md
+!/clases/
+!/modulos/
+!/repaso/
+!/practicas/
+
+# Privado o innecesario (explicito, aunque la lista blanca ya lo excluye)
+/_archivo/
+/_inbox/
+/CLAUDE.md
+/INDEX.md
+/.claude/
+/graphify-out/
+
+# Sensible, en cualquier carpeta
+*.pem
+*.ppk
+*.key
+*.rdp
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform/
+.aws/
+.env
+.env.*
+credentials
+crash.log
+
+# Sistema y editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

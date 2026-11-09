@@ -1,0 +1,7 @@
+[submodule "practicas/cloud-u1-p5-ee"]
+	path = practicas/cloud-u1-p5-ee
+	url = https://github.com/Erenriquezp/cloud-u1-p5-ee.git
+[submodule "practicas/cloud-u1-t4-windows-ee"]
+	path = practicas/cloud-u1-t4-windows-ee
+	url = https://github.com/Erenriquezp/cloud-u1-p5-ee.git
+	branch = tarea-4-windows
