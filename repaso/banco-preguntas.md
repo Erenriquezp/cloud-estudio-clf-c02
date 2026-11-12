@@ -166,6 +166,40 @@ A) `terraform init` · B) `terraform plan` · C) `terraform apply` · D) `terraf
 A) Todo · B) Solo TCP 80 · C) Solo HTTPS · D) Ninguno
 <details><summary>Respuesta</summary>B. Terraform quita la regla de salida por defecto al declarar `egress`.</details>
 
+## Clase 07
+
+**1. `[D3]`** ¿Qué tipo de almacenamiento ofrece Amazon EBS?
+A) Objetos · B) Bloques persistentes para instancias EC2 · C) Archivos compartidos por NFS · D) Cintas de archivo
+<details><summary>Respuesta</summary>B. EBS es almacenamiento por bloques y persistente; EFS es por archivos; S3, por objetos.</details>
+
+**2. `[D3]`** Una base de datos crítica necesita el mayor rendimiento de E/S sostenido. ¿Qué volumen EBS conviene?
+A) `gp3` · B) `io1` / `io2` (Provisioned IOPS) · C) Instance store · D) Amazon S3 Standard
+<details><summary>Respuesta</summary>B. `gp3` es de propósito general; `io1`/`io2` son para bases de datos con alto rendimiento.</details>
+
+**3. `[D3]`** Varias instancias EC2 en distintas zonas de disponibilidad deben leer y escribir los mismos archivos. ¿Qué servicio usar?
+A) Amazon EBS · B) Amazon EFS · C) Instance store · D) AWS Snowball
+<details><summary>Respuesta</summary>B. EFS es un sistema de archivos en red (NFS) compartido. Un volumen EBS se conecta a una instancia de su misma AZ `[externo]`.</details>
+
+**4. `[D3]`** ¿Qué protocolo usa Amazon EFS para que las instancias accedan a los archivos como si fueran locales?
+A) RDP · B) SSH · C) NFS · D) ICMP
+<details><summary>Respuesta</summary>C. NFS (Network File System), por TCP 2049.</details>
+
+**5. `[D3]`** ¿Qué requisito de red tiene Amazon EFS respecto a las instancias que lo montan?
+A) Estar en la misma VPC · B) Tener una Elastic IP · C) Ser instancias Windows · D) Estar en la misma AZ siempre
+<details><summary>Respuesta</summary>A. Debe estar en la misma VPC; hay un destino de montaje por AZ.</details>
+
+**6. `[D3]`** ¿Qué describe mejor el almacenamiento persistente?
+A) Existe solo mientras corre un proceso · B) Los datos perduran en el tiempo · C) Es siempre caché · D) Solo existe on-premises
+<details><summary>Respuesta</summary>B. El no persistente es volátil (ej. caché, instance store `[externo]`).</details>
+
+**7.** En una instancia Linux, `mount /dev/sdb /disco2` da `wrong fs type, bad superblock`. El volumen EBS es nuevo. ¿Qué falta?
+A) Reiniciar la instancia · B) Crear el sistema de archivos con `mkfs` · C) Cambiar el security group · D) Abrir el puerto 22
+<details><summary>Respuesta</summary>B. Un volumen nuevo llega en crudo, sin formato: primero `mkfs -t xfs`, luego `mount`.</details>
+
+**8. `[D4]` `[externo]`** ¿Cómo se cobra Amazon EBS?
+A) Por GB realmente usado · B) Por GB aprovisionado, aunque no se llene · C) Solo por solicitudes · D) Es gratis siempre
+<details><summary>Respuesta</summary>B. EFS cobra por lo que usa; EBS, por la capacidad aprovisionada.</details>
+
 ## AWS Academy: Introducción (M0)
 
 **1. `[D3]` `[externo]`** Una empresa quiere crear una aplicación de IA generativa usando modelos fundacionales sin administrar infraestructura. ¿Qué servicio usa?

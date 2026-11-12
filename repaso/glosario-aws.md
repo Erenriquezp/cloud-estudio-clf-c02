@@ -9,6 +9,8 @@ Orden alfabético. Una línea por término, con su dominio CLF y un enlace a la 
 | Almacenamiento de archivos | Jerarquía de carpetas en un sistema de archivos compartido (EFS) | D3 | [M7](../modulos/m07-almacenamiento.md#tipos-de-almacenamiento-d3) |
 | Almacenamiento de bloque | Datos en bloques de tamaño fijo, cada uno con su ID; al modificar, cambia solo el bloque afectado (EBS) | D3 | [M7](../modulos/m07-almacenamiento.md#tipos-de-almacenamiento-d3) |
 | Almacenamiento de objetos | Objeto = datos + metadatos + clave; al modificar, se reemplaza el objeto entero (S3) | D3 | [M7](../modulos/m07-almacenamiento.md#tipos-de-almacenamiento-d3) |
+| Almacenamiento no persistente | Volátil: existe mientras un proceso corre (ej. caché); en AWS, el instance store `[externo]` | D3 | [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md#conceptos-clave) |
+| Almacenamiento persistente | Los datos perduran en el tiempo, aunque la instancia se detenga (EBS, EFS, S3) | D3 | [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md#conceptos-clave) |
 | Amazon Bedrock | Servicio completamente administrado con modelos fundacionales para crear aplicaciones de IA generativa | D3 `[externo]` | [M0](../modulos/m00-introduccion-curso.md#tendencias-ia-generativa) |
 | Amazon EBS | Volúmenes de bloque para EC2; viven en una sola AZ y persisten aunque la instancia se detenga | D3 | [M7](../modulos/m07-almacenamiento.md#amazon-ebs-elastic-block-store) |
 | Amazon EC2 | Servidores virtuales (instancias) bajo demanda; IaaS | D3 | [M6](../modulos/m06-computo.md) |
@@ -41,6 +43,7 @@ Orden alfabético. Una línea por término, con su dominio CLF y un enlace a la 
 | cloud-init | Programa del SO que lee y ejecuta el user data en el primer arranque | D3 | [M6](../modulos/m06-computo.md#datos-de-usuario-user-data) |
 | Consola web (AWS Management Console) | Interfaz gráfica de AWS en el navegador | D3 | [M1](../modulos/m01-conceptos-nube.md#formas-de-interactuar-con-aws) |
 | CRR / SRR | Replicación de S3 entre regiones (recuperación ante desastres, latencia) / dentro de la misma región (logs, soberanía de datos) | D3 | [M7](../modulos/m07-almacenamiento.md#funciones-adicionales) |
+| Destino de montaje (EFS) | Punto de red de EFS en cada zona de disponibilidad, por el que las instancias montan el sistema de archivos `[externo]` | D3 | [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md#conceptos-clave) |
 | Datos de usuario (user data) | Script que se pasa al lanzar una instancia y corre como root solo en su primer arranque | D3 | [M6](../modulos/m06-computo.md#datos-de-usuario-user-data) |
 | DNS público | Nombre de host asociado a la IP pública de una instancia | D3 | [M5](../modulos/m05-redes.md) |
 | Elastic IP | IP pública fija que no cambia al detener la instancia `[externo]` | D3 | [M5](../modulos/m05-redes.md) |
@@ -49,6 +52,7 @@ Orden alfabético. Una línea por término, con su dominio CLF y un enlace a la 
 | gp3 | Tipo de volumen EBS SSD de propósito general; disco estándar de EC2 `[externo]` | D3 | [M6](../modulos/m06-computo.md) |
 | ICMP | Protocolo de `ping`; requiere su propia regla de entrada en el security group | — | [M5](../modulos/m05-redes.md#security-groups) |
 | Infraestructura como código (IaC) | Definir y crear la infraestructura con archivos de configuración (Terraform; en AWS, AWS CloudFormation `[externo]`) | D3 | [M1](../modulos/m01-conceptos-nube.md#infraestructura-como-código-iac) |
+| io1 / io2 | Volúmenes EBS Provisioned IOPS: alto rendimiento, para bases de datos | D3 | [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md#conceptos-clave) |
 | Instance store | Disco local de la instancia; efímero `[externo]` | D3 | [M7](../modulos/m07-almacenamiento.md#amazon-ebs-elastic-block-store) |
 | IPv4 privada | IP interna de la instancia dentro de la VPC (ej. `172.31.x.x`); la devuelve `hostname -I` | D3 | [clase 03](../clases/2026-10-22-clase-03-user-data.md#conceptos-clave) |
 | IPv4 pública | IP para acceder desde internet; cambia al detener e iniciar la instancia `[externo]` | D3 | [M5](../modulos/m05-redes.md) |
@@ -56,6 +60,7 @@ Orden alfabético. Una línea por término, con su dominio CLF y un enlace a la 
 | MFA Delete | Exige un código MFA además de la contraseña para borrar objetos o versiones; requiere versionado `[externo]` | D2 | [M7](../modulos/m07-almacenamiento.md#5-borrar-objetos-y-buckets) |
 | Modelo de responsabilidad compartida | AWS se encarga de la seguridad de la nube (hardware, infraestructura); el cliente, de la seguridad en la nube (datos, IAM, SO, cifrado) | D2 | [M7](../modulos/m07-almacenamiento.md#seguridad-del-bucket-d2) |
 | Modelo fundacional (FM) | Modelo de IA de uso general que Amazon Bedrock ofrece para crear aplicaciones de IA generativa | D3 `[externo]` | [M0](../modulos/m00-introduccion-curso.md#tendencias-ia-generativa) |
+| NFS | Network File System: protocolo para acceder a archivos remotos como si fueran locales; EFS lo usa por TCP 2049 | D3 | [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md#conceptos-clave) |
 | Par de claves (.pem) | Llave pública y privada para autenticarse en una instancia o descifrar la contraseña de Windows | D2 | [M6](../modulos/m06-computo.md) |
 | Paradigma declarativo | Se declara el estado objetivo de la infraestructura, no los pasos para lograrlo | D3 | [clase 06](../clases/2026-11-05-clase-06-terraform.md#conceptos-clave) |
 | Pilares del Well-Architected | Excelencia operativa, seguridad, fiabilidad, eficiencia del rendimiento, optimización de costos y sostenibilidad `[externo]` | D1 | [M9](../modulos/m09-arquitectura-nube.md#los-seis-pilares) |

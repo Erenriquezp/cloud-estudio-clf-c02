@@ -61,16 +61,6 @@ Para mantenerse al día: [Novedades de AWS](https://aws.amazon.com/new) · [AWS 
 - Cloud Foundations cubre gran parte de *Cloud Practitioner Essentials*, con más profundidad; también se parece a AWS Technical Essentials y AWS Business Essentials. No figura como capacitación recomendada en la guía, pero prepara bien.
 - Los servicios evaluados cambian: como mínimo, saber describir la funcionalidad general de una amplia gama de servicios.
 
-### ⚠️ La guía del inbox es de la versión anterior (CLF-C01)
-
-El PDF es la guía **CLF-C01 v1.6**; el examen objetivo es **CLF-C02**. Para dominios, pesos y servicios en alcance vale la [guía oficial CLF-C02](https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02.html) (resumen en el [syllabus](../syllabus.md#plan-de-certificación-clf-c02)). La tabla de pesos del PDF se extrae con las etiquetas desordenadas, así que no se usa.
-
-Del PDF se rescata solo lo general:
-- Tipos de pregunta: opción única (1 correcta, 3 distractores) y respuesta múltiple (2 o más correctas de 5 o más opciones).
-- Sin penalización por adivinar; las no respondidas cuentan como incorrectas.
-- Puntaje escalado de 100 a 1000, aprobación **700**; modelo compensatorio (no hay que aprobar cada dominio).
-- Puede haber preguntas sin puntuar, no identificadas.
-
 ## Documentación de AWS
 
 - [docs.aws.amazon.com](https://docs.aws.amazon.com/): guías de usuario y de desarrollador, referencias de API, tutoriales; filtrables por producto, categoría o sector. Cada SDK y herramienta (AWS CLI, boto3) tiene la suya.

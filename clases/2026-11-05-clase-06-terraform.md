@@ -3,8 +3,6 @@
 - **Fecha:** 2026-11-05 (fecha del taller 8)
 - **Syllabus:** U1 Cloud Computing: Virtual Machines · Semana 4. El syllabus marca modelo de costos (precios de EC2, AWS Pricing Calculator `[externo]`); en clase se vio Terraform. Continúa la [clase 05](2026-10-29-clase-05-security-groups-cli.md), donde se instaló.
 - **Cloud Foundations:** [M1 Infraestructura como código](../modulos/m01-conceptos-nube.md#infraestructura-como-código-iac) · [M6 Terraform](../modulos/m06-computo.md#terraform-instancia-ec2-y-security-group) · [M5 Security groups](../modulos/m05-redes.md#security-groups)
-- **Original:** [_archivo/clase-06/notas-crudas.txt](../_archivo/clase-06/notas-crudas.txt)
-- **Taller 8 entregado (2026-11-05):** [_archivo/clase-06/taller-08-terraform.pdf](../_archivo/clase-06/taller-08-terraform.pdf) (solo contiene el enlace al repositorio [Erenriquezp/cloud-u1-p5-ee](https://github.com/Erenriquezp/cloud-u1-p5-ee)). Código de la clase: [practicas/cloud-u1-p5-ee/](../practicas/cloud-u1-p5-ee/main.tf) (`main.tf`, `.gitignore`, `README.md`; repositorio de Git).
 
 ## Conceptos clave
 
@@ -181,9 +179,3 @@ Enunciado: replicar el taller 8 con Terraform para una instancia Windows. Vence 
 - `[externo]` `data "aws_ami"` consulta la AMI más reciente en vez de escribir su ID a mano.
 - `[externo]` La salida permite todo el tráfico: con el `egress` del taller 8 (solo TCP 80), Windows se quedaría sin DNS ni HTTPS.
 - `[externo]` El security group se llama `mi-security-group-windows` para no chocar con `mi-security-group`, que puede seguir existiendo en la VPC.
-
-## ⚠️ Dudas
-
-- **Forma de entrega de la tarea 4:** el enunciado no la indica. El taller 8 se entregó como enlace a un repositorio.
-- **`terraform plan` / `apply` de la instancia sin security group:** las notas dicen "mi_instancia_2 - plan, apply" sin dar la configuración de esa primera versión. Se dedujo que solo tenía provider + `aws_instance`.
-- **Estado de la instancia:** el estado entregado no refleja si se hizo `terraform destroy` al final. Confirmar en la consola.

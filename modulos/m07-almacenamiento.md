@@ -1,7 +1,14 @@
 # M7: Almacenamiento (Storage)
 
 - **Syllabus:** U4 Object Storage · **CLF-C02:** D3 (servicios de almacenamiento), D2 (seguridad de S3)
-- **Fuentes:** curso AWS Educate *Getting Started with Storage* (2026-11-03)
+- **Fuentes:** curso AWS Educate *Getting Started with Storage* (2026-11-03) · [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md) (EBS y EFS en EC2)
+
+## Persistente vs. no persistente `[D3]`
+
+| | Persistente | No persistente |
+|---|---|---|
+| Datos | **Perduran en el tiempo** | **Volátiles**: existen mientras corre un proceso (ej. caché) |
+| En AWS | Amazon EBS, Amazon EFS, Amazon S3 | Instance store `[externo]` |
 
 ## Nube vs. on-premises
 
@@ -42,6 +49,8 @@ Beneficios del almacenamiento en la nube: rentable, seguro, accesible, escalable
 
 `[externo]` Los HDD (st1 y sc1) **no sirven como volumen de arranque**.
 
+En la [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md#conceptos-clave): **`gp3`** = General Purpose (SSD de tercera generación) · **`io1` / `io2`** = Provisioned IOPS, para bases de datos. Para usar un volumen nuevo en Linux hay que **formatearlo y montarlo** ([taller 9](../clases/2026-11-10-clase-07-ebs-efs.md#1-taller-9-agregar-un-disco-ebs-a-una-instancia-linux)): `mkfs` → `mount`.
+
 ### Amazon EFS (Elastic File System)
 - Sistema de archivos **elástico y compartido**: no hay que aprovisionar capacidad.
 - Se monta desde EC2 (varias instancias en **distintas AZ**), contenedores, AWS Lambda y servidores on-premises.
@@ -54,6 +63,7 @@ Beneficios del almacenamiento en la nube: rentable, seguro, accesible, escalable
 | Cifrado | **En reposo** con claves de **AWS KMS**; **en tránsito** con **TLS** |
 
 - Casos de uso: gestión de contenido y servidores web, procesamiento de medios, directorios compartidos y *home*, respaldos de BD, herramientas de desarrollo, analítica de big data, aplicaciones serverless.
+- Se accede por **NFS** (acceder a archivos remotos como si fueran locales), puerto **TCP 2049**. Debe estar en la **misma VPC** que las instancias. Cada AZ tiene un **destino de montaje** `[externo]` (*mount target*) por el que las instancias de esa AZ se conectan. Taller → [clase 07](../clases/2026-11-10-clase-07-ebs-efs.md#2-taller-10-amazon-efs-compartido-entre-dos-instancias).
 - `[externo]` Solo para Linux (NFS). El equivalente para Windows es Amazon FSx.
 
 ### EBS vs. EFS vs. S3 (resumen para el examen)
@@ -233,6 +243,3 @@ Política usada en la tarea 6:
 - Un `Deny` explícito **siempre gana** sobre cualquier `Allow`. Por eso ni el dueño del bucket pudo borrar los archivos.
 - AWS hoy recomienda **dejar las ACL desactivadas** y publicar con bucket policy. En producción se usa **CloudFront con Origin Access Control (OAC)** y el bucket **privado**, lo que además da HTTPS: el endpoint de sitio web de S3 solo sirve HTTP.
 - Ese es el patrón que hay que usar para el frontend de la tesis, no el de la simulación.
-
-## ⚠️ Dudas
-- El curso dice que S3 "emplea tres formas de cifrado" sin nombrarlas; la lista SSE-S3/SSE-KMS/SSE-C es `[externo]`.

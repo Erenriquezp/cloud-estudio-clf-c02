@@ -3,8 +3,6 @@
 - **Fecha:** 2026-10-27 (fecha del taller 6; la página de la instancia marca `Wed Oct 28 00:48:15 UTC 2026` = 27/10 19:48 hora de Ecuador)
 - **Syllabus:** U1 Cloud Computing: Virtual Machines · Semana 3. El syllabus marca balanceo de carga y Cloud CDN (Elastic Load Balancing y Amazon CloudFront `[externo]`). En clase se vio cómo administrar EC2 con la AWS CLI.
 - **Cloud Foundations:** [M1 Formas de interactuar con AWS](../modulos/m01-conceptos-nube.md#formas-de-interactuar-con-aws) · [M6 EC2 con la AWS CLI](../modulos/m06-computo.md#amazon-ec2-con-la-aws-cli)
-- **Original:** [_archivo/clase-04/notas-crudas.txt](../_archivo/clase-04/notas-crudas.txt)
-- **Taller 6 entregado (2026-10-27):** [_archivo/clase-04/taller-06-aws-cli.pdf](../_archivo/clase-04/taller-06-aws-cli.pdf). Rehacer la [tarea 2 (user data)](2026-10-22-clase-03-user-data.md#tarea-2-ec2-user-data) lanzando la instancia con la AWS CLI.
 
 ## Conceptos clave
 

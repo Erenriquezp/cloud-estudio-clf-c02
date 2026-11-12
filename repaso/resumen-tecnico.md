@@ -1,4 +1,4 @@
-# Resumen técnico (clases 01–06)
+# Resumen técnico (clases 01–07)
 
 ## Amazon EC2
 
@@ -164,3 +164,17 @@ resource "aws_instance" "mi_instancia_2" {
 ```
 
 `[externo]` En Terraform, declarar `egress` quita la salida abierta por defecto; en la CLI no.
+
+## Almacenamiento: EBS y EFS
+
+| | Amazon EBS (taller 9) | Amazon EFS (taller 10) |
+|---|---|---|
+| Tipo | Bloque, persistente; `gp3` general, `io1`/`io2` para BD | Archivos en red, administrado, **NFS (TCP 2049)** |
+| Uso | Un disco para una instancia | Carpeta compartida por varias instancias, en la misma VPC; un destino de montaje por AZ |
+
+Disco nuevo en Linux (crudo, sin formato): `lsblk -f` / `df -hT` → `sudo mkdir -p /disco2` → `sudo mkfs -t xfs /dev/sdb` → `sudo blkid /dev/sdb` → `sudo mount /dev/sdb /disco2`.
+`mount` antes de `mkfs` falla con `wrong fs type, bad superblock`. `[externo]` El montaje se pierde al reiniciar: usar `/etc/fstab`.
+
+EFS `[externo]`: `sudo dnf install -y amazon-efs-utils` → `sudo mkdir /efs` → `sudo mount -t efs -o tls fs-XXXX:/ /efs`. El security group debe permitir TCP 2049.
+
+Windows (tarea): Administración de discos → inicializar → nuevo volumen simple → NTFS → letra `D:`.

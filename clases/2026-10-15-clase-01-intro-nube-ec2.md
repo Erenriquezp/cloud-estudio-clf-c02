@@ -3,11 +3,9 @@
 - **Fecha:** 2026-10-15
 - **Syllabus:** U1 Cloud Computing: Virtual Machines · Semana 1 (Introducción)
 - **Cloud Foundations:** [M1 Conceptos de nube](../modulos/m01-conceptos-nube.md) · [M6 Cómputo](../modulos/m06-computo.md)
-- **Original:** [_archivo/clase-01/notas-crudas.txt](../_archivo/clase-01/notas-crudas.txt)
 - **Avisos del docente:** 2 cursos de AWS Academy en paralelo:
   - **Cloud Foundations:** los módulos M1–M5 deben estar terminados, con su evaluación, **al cierre de la U2** del syllabus (antes de la sumativa 1, semana 9, 2026-12-07). Es una fecha límite, no una evaluación de esta semana. Los "2 puntos" coinciden con el [syllabus](../syllabus.md#evaluación-sobre-20): M1–M5 vale 6/20 de la formativa individual (35%), es decir 6/20 × 7 = **2,1 pts de la nota final**. El bloque M6–M10 vale otro tanto.
   - **Learner Lab:** entorno de práctica para los talleres (ver abajo).
-- **Corrección a las notas:** decían que en la nube privada el proveedor aporta el hardware con *Snowball*. En AWS ese servicio es **AWS Outposts**; AWS Snowball solo sirve para transferir datos de forma física `[externo]`.
 
 ## Conceptos clave
 

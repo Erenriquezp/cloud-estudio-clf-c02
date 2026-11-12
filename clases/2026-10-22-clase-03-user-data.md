@@ -329,7 +329,7 @@ EOF
 
 **Enunciado:** consultar **a mano** qué es AWS Support y sus tipos; subir la hoja escaneada o en foto. Teoría completa en [M2](../modulos/m02-economia-facturacion.md#aws-support).
 
-#### Texto para copiar a mano (cabe en una hoja)
+#### Texto para copiar a mano
 
 > **Universidad Central del Ecuador · Computación Grid y Cloud**
 > **Tarea 3: AWS Support** · TU NOMBRE · 27/10/2026
@@ -349,9 +349,3 @@ EOF
 > **Herramientas relacionadas:** AWS Trusted Advisor (recomendaciones de costo, seguridad y rendimiento), AWS Health Dashboard (estado de los servicios), AWS re:Post (foro), AWS Support Center (casos).
 >
 > **Fuente:** aws.amazon.com/premiumsupport/plans (consultado el 25/10/2026)
-
-#### Para entregar
-
-1. Copiarlo a mano en una hoja: puede ir como lista o como una tabla de 4 filas (Plan | Costo | Para qué | Lo clave).
-2. Escanear con la cámara del celular (Google Drive → *Escanear* o la app de notas) para que salga recto y en PDF.
-3. Subir como `tarea-03.pdf` (o la foto).

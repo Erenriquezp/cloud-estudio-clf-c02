@@ -131,7 +131,3 @@ El AWS Well-Architected Framework es una guía de buenas prácticas de AWS para 
 6. **Sostenibilidad:** se enfoca en reducir el impacto ambiental de la nube, especialmente el consumo de energía, aprovechando al máximo los recursos y minimizando los necesarios.
 
 Fuente: AWS, *AWS Well-Architected Framework* (documentación oficial).
-
-## ⚠️ Dudas
-
-- **Tarea 5, forma de entrega:** el enunciado no la indica (foto o PDF del escrito, por ejemplo); confirmar con el docente.

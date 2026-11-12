@@ -3,7 +3,6 @@
 - **Fecha:** 2026-10-20
 - **Syllabus:** U1 Cloud Computing: Virtual Machines · Semana 2. El syllabus marca para esta semana almacenamiento persistente, grupos de instancias y recursos dinámicos (Amazon EBS y Auto Scaling `[externo]`). En clase se vio la red de la instancia, los security groups y las AMIs.
 - **Cloud Foundations:** [M5 Redes](../modulos/m05-redes.md) · [M6 Cómputo](../modulos/m06-computo.md)
-- **Original:** [_archivo/clase-02/notas-crudas.txt](../_archivo/clase-02/notas-crudas.txt)
 - **Talleres entregados (2026-10-20):** [taller 2: ping y servidor web](../_archivo/clase-02/taller-02-ping-servidor-web.pdf) · [taller 3: EC2 con Windows](../_archivo/clase-02/taller-03-ec2-windows.pdf) · [taller 4: AMIs personalizadas](../_archivo/clase-02/taller-04-amis-personalizadas.pdf)
 - **Deber:** AMIs con Windows. Entregar captura de pantalla con el programa instalado y de las AMIs. **Plazo: jueves 2026-10-22, 18:00.**
 
@@ -168,11 +167,3 @@ A) DNS público · B) Elastic IP · C) Una subred nueva · D) Una AMI
 **7. `[D2]` `[externo]`** Un security group recién creado no tiene reglas personalizadas. ¿Cuál es su comportamiento?
 A) Permite toda la entrada y bloquea toda la salida · B) Bloquea toda la entrada y permite toda la salida · C) Bloquea todo · D) Permite todo
 <details><summary>Respuesta</summary>B. Hay que agregar reglas de entrada de forma explícita; la salida viene abierta (All traffic).</details>
-
-## Deber: Tarea 1, AMIs personalizadas Windows
-
-Enunciado: replicar el taller 4 con la instancia Windows del taller 3. Se entregan dos capturas: la AMI y la instancia nueva con IntelliJ abierto por escritorio remoto. Vence el **2026-10-22 a las 18:00**. Entregado: [_archivo/clase-02/tarea-01.pdf](../_archivo/clase-02/tarea-01.pdf).
-
-- Se repiten los pasos 7 y 8 con `ec2-windows-ee` → AMI `mi-imagen-windows-ee` → instancia `mi-segunda-windows-ee`, y luego se conecta con el paso 6.
-- `[externo]` Una AMI de Windows creada sin Sysprep conserva la contraseña de `Administrator` de la instancia original. En la instancia nueva, *Get password* puede decir que no está disponible; en ese caso se usa la contraseña descifrada de `ec2-windows-ee`.
-- `[externo]` Una AMI de Windows tarda más en pasar a *Available* que una de Linux (de 10 a 20 minutos).

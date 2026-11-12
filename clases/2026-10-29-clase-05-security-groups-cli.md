@@ -1,10 +1,8 @@
 # Clase 05: Security groups con la AWS CLI (y Terraform instalado)
 
 - **Fecha:** 2026-10-29 (fecha del taller 7)
-- **Syllabus:** U1 Cloud Computing: Virtual Machines · Semana 3 (la misma de la clase 04). Se continúa con la AWS CLI; el syllabus de esa semana marca balanceo de carga y Cloud CDN (Elastic Load Balancing y Amazon CloudFront `[externo]`).
+- **Syllabus:** U1 Cloud Computing: Virtual Machines · Semana 3. Se continúa con la AWS CLI; el syllabus de esa semana marca balanceo de carga y Cloud CDN (Elastic Load Balancing y Amazon CloudFront `[externo]`).
 - **Cloud Foundations:** [M5 Security groups con la AWS CLI](../modulos/m05-redes.md#security-groups-con-la-aws-cli) · [M6 EC2 con la AWS CLI](../modulos/m06-computo.md#amazon-ec2-con-la-aws-cli) · [M1 Infraestructura como código](../modulos/m01-conceptos-nube.md#infraestructura-como-código-iac)
-- **Original:** [_archivo/clase-05/notas-crudas.txt](../_archivo/clase-05/notas-crudas.txt)
-- **Taller 7 entregado (2026-10-29):** [_archivo/clase-05/taller-07-security-groups-cli.pdf](../_archivo/clase-05/taller-07-security-groups-cli.pdf). Crear un security group, sus reglas y una instancia que lo use, todo con la CLI.
 
 ## Conceptos clave
 
@@ -206,8 +204,3 @@ A) Sí, la nueva regla reemplaza a la anterior · B) No, se suman: sigue permiti
 **7. `[D3]` `[externo]`** Una empresa define su infraestructura en archivos de texto y una herramienta la crea automáticamente. ¿Qué práctica es?
 A) Infraestructura como código · B) Balanceo de carga · C) Acceso por consola · D) Snapshot de EBS
 <details><summary>Respuesta</summary>A. Terraform es una herramienta de terceros para esto; el servicio de AWS equivalente es AWS CloudFormation.</details>
-
-## ⚠️ Dudas
-
-- **`user-data.sh` del taller 7:** el PDF solo lo referencia. Se asume que es el script de la tarea 2 (Apache + herramientas), como en el taller 6.
-- **Lanzamiento con `t3.micro` y `ami-073f45061d35c86f0`:** las notas no dicen por qué cambió la AMI respecto a la clase 04 (`ami-04b938437b69a2c9c`). Verificar que sea Amazon Linux.
